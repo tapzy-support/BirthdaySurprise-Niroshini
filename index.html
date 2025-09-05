@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Amma</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #1e1e3f, #3a3a77);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 3em;
+      font-family: 'Pacifico', cursive;
+      animation: glowBounce 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes glowBounce {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        text-shadow: none;
+      }
+      50% {
+        transform: translateY(10px);
+        opacity: 0.8;
+        text-shadow: 0 0 10px #ff66cc;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+        text-shadow: 0 0 20px #ff99cc, 0 0 40px #ff3399;
+      }
+    }
+
+    .typing-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8em;
+      max-width: 800px;
+      margin: 30px auto;
+      color: #fff5f8;
+      white-space: pre-wrap;
+      min-height: 5em;
+      padding: 0 20px;
+    }
+
+    button {
+      background-color: #ff3399;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e60073;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transform-origin: center;
+      background: #2b2250;
+      color: #ffe6f0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 102, 204, 0.3);
+      z-index: 999;
+      max-width: 90%;
+      text-align: center;
+      opacity: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .popup.show {
+      display: block;
+      animation: popupZoom 0.8s ease forwards;
+    }
+
+    @keyframes popupZoom {
+      0% {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .popup h2 {
+      color: #ff66cc;
+      margin-bottom: 10px;
+    }
+
+    .close-btn {
+      background-color: #ff3399;
+      color: white;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .gallery {
+      margin: 50px auto;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .typing-text {
+        font-size: 1.2em;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+
+      .popup {
+        padding: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+      .gallery img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday, Dixxa 💖</h1>
+
+  <!-- Typing Text -->
+  <div class="typing-text" id="typing"></div>
+
+  <!-- Surprise Button -->
+  <button onclick="showSurprise()">🎁 Click for Your Surprise</button>
+
+  <!-- Popup Content -->
+  <div class="popup" id="popup">
+    <h2>My Dearest Dixxa,</h2>
+    <p>
+      You are the best part of every day.<br>
+      May your birthday be as lovely and wonderful as you are.<br>
+      Here's to many more memories together! 🌟<br>
+      I love you endlessly. 💕
+    </p>
+
+    <!-- Voice Note -->
+    <audio controls>
+      <source src="voice-cheka.ogg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+
+  <!-- Photo Gallery -->
+  <h2 style="margin-top: 80px; font-family: 'Quicksand', sans-serif; font-weight: 600; color: #ffe6f0;">
+    📸 Our Beautiful Moments
+  </h2>
+
+  <div class="gallery">
+    <img src="cheka1.jpg" alt="Memory 1">
+    <img src="cheka2.jpg" alt="Memory 2">
+    <img src="cheka3.jpg" alt="Memory 3">
+    <img src="cheka4 .jpg" alt="Memory 4">
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function showSurprise() {
+      const popup = document.getElementById('popup');
+      popup.classList.remove('show');
+      popup.style.display = 'block';
+      void popup.offsetWidth;
+      popup.classList.add('show');
+
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      popup.classList.remove('show');
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 300);
+    }
+
+    const message = `Today is all about YOU — your smile, your kindness, your magic.
+I'm so lucky to share this life with you.
+Ready for your surprise?`;
+    const typingEl = document.getElementById("typing");
+    let idx = 0;
+
+    function type() {
+      if (idx < message.length) {
+        typingEl.textContent += message.charAt(idx);
+        idx++;
+        setTimeout(type, 50);
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(type, 2500);
+    };
+  </script>
+
+</body>
+</html>
