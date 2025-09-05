@@ -180,6 +180,13 @@
       .gallery img {
         height: 150px;
       }
+      .voice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
     }
   </style>
 </head>
@@ -192,31 +199,44 @@
   <button onclick="showSurprise()">🎁 Click for Your Surprise</button>
 
   <div class="popup" id="popup">
-    <h2>To Our Beautiful Amma, Niroshini</h2>
-    <p>
-      You are the heart of our home and the soul of our family.<br>
-      Your love, strength, and kindness inspire me every single day.<br>
-      On your special day, We just want to say thank you for being you.<br>
-      We love you more than words can ever express. 💕
-    </p>
+  <h2>To Our Beautiful Amma, Niroshini</h2>
+  <p>
+    You are the heart of our home and the soul of our family.<br>
+    Your love, strength, and kindness inspire me every single day.<br>
+    On your special day, We just want to say thank you for being you.<br>
+    We love you more than words can ever express. 💕
+  </p>
 
+  <div class="voice-group">
     <audio controls>
-      <source src="voice-cheka.ogg" type="audio/mpeg">
+      <source src="NiroshiniV1.ogg" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
-    <button class="close-btn" onclick="closePopup()">Close</button>
+    <audio controls>
+      <source src="NiroshiniV2.ogg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <audio controls>
+      <source src="NiroshiniV3.ogg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
+
+  <button class="close-btn" onclick="closePopup()">Close</button>
+</div>
+
 
   <h2 style="margin-top: 80px; font-family: 'Quicksand', sans-serif; font-weight: 600; color: #ff69b4;">
     📸 Cherished Moments with Amma
   </h2>
 
   <div class="gallery">
-    <img src="cheka1.jpg" alt="Memory 1">
-    <img src="cheka2.jpg" alt="Memory 2">
-    <img src="cheka3.jpg" alt="Memory 3">
-    <img src="cheka4.jpg" alt="Memory 4">
+    <img src="Niroshini1.jpg" alt="Memory 1">
+    <img src="Niroshini2.jpg" alt="Memory 2">
+    <img src="Niroshini3.jpg" alt="Memory 3">
+    <img src="Niroshini4.jpg" alt="Memory 4">
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
