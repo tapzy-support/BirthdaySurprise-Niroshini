@@ -13,8 +13,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #1e1e3f, #3a3a77);
-      color: white;
+      background: linear-gradient(to bottom, #ffe6f0, #ffcce0);
+      color: #4d004d;
       text-align: center;
       overflow-x: hidden;
     }
@@ -25,6 +25,7 @@
       font-family: 'Pacifico', cursive;
       animation: glowBounce 2s ease-out forwards;
       opacity: 0;
+      color: #ff1493;
     }
 
     @keyframes glowBounce {
@@ -50,14 +51,14 @@
       font-size: 1.8em;
       max-width: 800px;
       margin: 30px auto;
-      color: #fff5f8;
+      color: #800040;
       white-space: pre-wrap;
       min-height: 5em;
       padding: 0 20px;
     }
 
     button {
-      background-color: #ff3399;
+      background-color: #ff66b2;
       color: white;
       padding: 15px 30px;
       border: none;
@@ -69,7 +70,7 @@
     }
 
     button:hover {
-      background-color: #e60073;
+      background-color: #ff3385;
     }
 
     .popup {
@@ -79,11 +80,11 @@
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
       transform-origin: center;
-      background: #2b2250;
-      color: #ffe6f0;
+      background: #fff0f5;
+      color: #800040;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 0 30px rgba(255, 102, 204, 0.3);
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
       z-index: 999;
       max-width: 90%;
       text-align: center;
@@ -113,7 +114,7 @@
     }
 
     .close-btn {
-      background-color: #ff3399;
+      background-color: #ff66b2;
       color: white;
       margin-top: 20px;
       padding: 10px 20px;
@@ -139,6 +140,7 @@
       border-radius: 10px;
       transition: transform 0.3s ease;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
     }
 
     .gallery img:hover {
@@ -175,25 +177,21 @@
 </head>
 <body>
 
-  <h1>Happy Birthday, Dixxa 💖</h1>
+  <h1>Happy Birthday, Niroshini 💖</h1>
 
-  <!-- Typing Text -->
   <div class="typing-text" id="typing"></div>
 
-  <!-- Surprise Button -->
   <button onclick="showSurprise()">🎁 Click for Your Surprise</button>
 
-  <!-- Popup Content -->
   <div class="popup" id="popup">
-    <h2>My Dearest Dixxa,</h2>
+    <h2>To Our Beautiful Amma, Niroshini</h2>
     <p>
-      You are the best part of every day.<br>
-      May your birthday be as lovely and wonderful as you are.<br>
-      Here's to many more memories together! 🌟<br>
-      I love you endlessly. 💕
+      You are the heart of our home and the soul of our family.<br>
+      Your love, strength, and kindness inspire me every single day.<br>
+      On your special day, We just want to say thank you for being you.<br>
+      We love you more than words can ever express. 💕
     </p>
 
-    <!-- Voice Note -->
     <audio controls>
       <source src="voice-cheka.ogg" type="audio/mpeg">
       Your browser does not support the audio element.
@@ -202,19 +200,17 @@
     <button class="close-btn" onclick="closePopup()">Close</button>
   </div>
 
-  <!-- Photo Gallery -->
-  <h2 style="margin-top: 80px; font-family: 'Quicksand', sans-serif; font-weight: 600; color: #ffe6f0;">
-    📸 Our Beautiful Moments
+  <h2 style="margin-top: 80px; font-family: 'Quicksand', sans-serif; font-weight: 600; color: #ff66b2;">
+    📸 Cherished Moments with Amma
   </h2>
 
   <div class="gallery">
     <img src="cheka1.jpg" alt="Memory 1">
     <img src="cheka2.jpg" alt="Memory 2">
     <img src="cheka3.jpg" alt="Memory 3">
-    <img src="cheka4 .jpg" alt="Memory 4">
+    <img src="cheka4.jpg" alt="Memory 4">
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
     function showSurprise() {
@@ -239,9 +235,9 @@
       }, 300);
     }
 
-    const message = `Today is all about YOU — your smile, your kindness, your magic.
-I'm so lucky to share this life with you.
-Ready for your surprise?`;
+    const message = `Today we celebrate the most incredible woman we know — Our Amma, Niroshini.
+Your warmth, your laughter, your love… they make life beautiful.
+Thank you for everything you do. You deserve all the joy in the world.`;
     const typingEl = document.getElementById("typing");
     let idx = 0;
 
